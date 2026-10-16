@@ -196,6 +196,7 @@ fun InputFormSection(modifier: Modifier = Modifier,
         if ((reps.toIntOrNull() ?: 0) > CONSISTENT_RESULT_LIMIT)
             Text(modifier = Modifier
                 .fillMaxWidth()
+                .testTag("Warning")
                 .padding(top = 4.dp),
                 text = R.string.less_reliable_results.asResource(CONSISTENT_RESULT_LIMIT + 1),
                 style = TextStyle(fontSize = 14.sp),
